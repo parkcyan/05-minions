@@ -18,6 +18,10 @@ p, img, div {
 	text-align: center;
 }
 
+header {
+	height: 280px;
+}
+
 .header-top {
 	max-width: 1190px;
 	min-height: 200px;
@@ -56,11 +60,13 @@ p, img, div {
 .header-bottom {
 	border-top: 2px solid #f9c02d;
 	clear: both;
+	margin-bottom: 20px;
 }
 
 
 #gnb{
 	width:600px;
+	height: 60px;
 	margin:0 auto;		/* block 요소일때만 */
 }
 #gnb li{
@@ -80,114 +86,25 @@ p, img, div {
 	color:#000;
 }
 
-.video-wrap {
-	text-align: center;
-	margin: 0 auto 100px;
-	width: 920px;
-    height: 600px;
-}
-
-.video-wrap img {
-	position: relative;
-    bottom: 323px;
-}
-
-/*
-====section====
-*/
-
-.head {
+.login-article p:first-child {
 	font-size: 30px;
 	color:#f9c02d;	
 	font-weight: 900;
 	margin-bottom: 20px;
 }
 
-.articlebox {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 20px;
+input {
+	border: 1px solid #666;
+	height: 30px;
 }
 
-.articlebox p {
-	width: 200px;
-	padding: 5px 0;
-	margin: 0 30px;
-	background-color: #d9d9d9;
+.login-table {
+	margin: 0 auto 20px;
 }
 
-.synopsis-article .articlebox p:first-child {
-	background-color: #f9c02d;
+.login-table td:first-child {
+	width: 90px;
 }
-
-.synopsis {
-	display: flex;
-	justify-content: center;	
-}
-
-.synopsis div {
-	height: 600px;
-}
-
-.synopsis div:first-child {
-	width: 510px;
-}
-
-.synopsis img {
-	width: 386px;
-	height: 497px;
-}
-
-.synopsis div img:last-child {
-	position: relative;
-    left: 60px;
-    bottom: 440px;
-}
-
-.synopsis div:last-child {
-	width: 546px;
-}
-
-.synopsis p {
-	text-align: left;
-}
-
-.character-article .articlebox p:nth-child(2) {
-	background-color: #f9c02d;
-}
-
-.character {
-	margin-bottom: 20px;
-}
-
-.character div {
-	display: flex;
-	justify-content: center;
-}
-
-.trailer-article .articlebox p:last-child {
-	background-color: #f9c02d;
-}
-
-.trailer {
-	margin-bottom: 20px;
-}
-
-.trailer div {
-	display: flex;
-	justify-content: center;
-}
-
-.trailer div:first-child {
-	margin-bottom: 20px;
-}
-
-.trailer iframe {
-	margin: 0 20px;
-}
-/*
-====footer====
-*/
 
 .footerimg {
 	background-color: var(--main-bg-color);
