@@ -1,0 +1,219 @@
+@charset "UTF-8";
+@import "./reset.css";
+
+:root {
+	--main-bg-color: #f9c02d; 
+}
+
+html { font-size: 20px; } 	/* root element */
+
+body {
+	font-family: "Noto Sans KR", sans-serif;
+	color: #222;
+	line-height: 1.5;
+	letter-spacing: -1px;	
+}
+
+p, img, div {
+	text-align: center;
+}
+
+.header-top {
+	max-width: 1190px;
+	min-height: 200px;
+	margin: 0 auto;
+	position: relative;
+}
+.links {
+	float: left;
+	margin:70px 0 0;
+}
+.links li:nth-child(2), .icons li:nth-child(2){
+	margin:0 1rem;
+}
+.links li, .icons li {
+	float: left;
+}
+.links li a{
+	font-size:.7rem;
+	color:#666;
+	font-weight: 500;
+}
+.links li a:hover{
+	color:#000;
+}
+.logo {
+	position: absolute;
+	left: 50%;
+	margin-left: -150px;
+	bottom: -8px;
+}
+.icons {
+	float: right;
+	margin:70px 0 0;
+}
+
+.header-bottom {
+	border-top: 2px solid #f9c02d;
+	clear: both;
+}
+
+
+#gnb{
+	width:600px;
+	margin:0 auto;		/* block 요소일때만 */
+}
+#gnb li{
+	float:left;
+	width:150px;
+	text-align:center;
+	/*padding:.625rem 0;*/
+}
+#gnb li a{
+	display:block;
+	padding:.625rem 0;
+	font-size:.9rem;
+	color:#f9c02d;
+	font-weight: 700;
+}
+#gnb li a:hover{ 		/* pseudo-class 가상 선택자 */
+	color:#000;
+}
+
+.video-wrap {
+	text-align: center;
+	margin: 0 auto 100px;
+}
+
+.video-wrap img {
+	position: absolute;
+	left: 40%;
+	bottom: 0%;
+}
+
+/*
+====section====
+*/
+
+.head {
+	font-size: 30px;
+	color:#f9c02d;	
+	font-weight: 900;
+	margin-bottom: 20px;
+}
+
+.articlebox {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.articlebox p {
+	width: 200px;
+	margin: 0 30px;
+	background-color: #d9d9d9;
+}
+
+.synopsis {
+	display: flex;
+	justify-content: center;	
+}
+
+.synopsis div:first-child {
+	width: 510px;
+}
+
+.synopsis img {
+	width: 386px;
+	height: 497px;
+}
+
+.synopsis div:last-child {
+	width: 546px;
+}
+
+.synopsis p {
+	text-align: left;
+}
+/*
+====footer====
+*/
+
+.footerimg {
+	background-color: var(--main-bg-color);
+}
+
+.foot {
+	width: 920px;
+	height: 99px;
+	margin: 0 auto;
+}
+
+.footleft {
+	float: left;
+	margin: 20px auto;
+}
+
+.footright {
+	float: right;
+}
+
+.footleft ul {
+	display: flex;
+}
+
+.footleft ul li {
+	color: #888888;
+	font-size: 15px;
+	padding: 10px;
+}
+
+.footleft ul li:first-child {
+	padding-left: 0px;
+}
+
+.footleft ul li:hover {
+	color: #000;
+}
+
+.footleft p {
+	color: #888888;
+	text-align: left;
+	font-size: 11px;
+}
+
+.footright {
+	height: inherit;
+	display: flex;
+	align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
