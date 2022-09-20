@@ -9,9 +9,28 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/style.css" />
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	</head>
 	<body>
 		<h1 class="d-none">Minions: The Rise of Gru</h1>
+		<script>
+			function showAfterLoad() {
+				$("#popup").css("display", "block");
+				$("body").css("overflow", "hidden");
+			}
+			$(function(){
+				$("#close").click(function(){
+					$("#popup").css("display", "none");
+				})
+			})
+		</script>
+		<div id="popup" class="bg">
+			<div class="content">
+				<img src="images/social2.png" alt="social2" />
+				<button type="button" id="close"><img src="images/close.png" alt="close" /></button>
+			</div>
+			
+		</div>
 		<header>
 			<div class="header-top">
 				<ul class="links">

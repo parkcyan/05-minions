@@ -18,6 +18,49 @@ p, img, div {
 	text-align: center;
 }
 
+/* popup style */
+
+.bg {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,.3); /* 검정색, 30% 투명도 */
+	z-index:9999;	
+}
+
+.bg .content {
+	position: absolute;
+	width: 920px;
+	height: 450px;
+	left: 50%;
+	top: 50%;
+	margin-left: calc(-920px / 2);
+	margin-top: calc(-450px / 2);
+}
+
+.bg .content img {
+	width: 920px;
+	height: 450px;
+}
+
+#close {
+	border: 0;
+	width: 50px;
+    height: 50px;
+    background: transparent;
+    position: absolute;
+    top: 5%;
+    left: 91%;
+}
+
+#close img {
+	width: 50px;
+	height: 50px;
+}
+
+
 .header-top {
 	max-width: 1190px;
 	min-height: 200px;
