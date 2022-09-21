@@ -176,6 +176,13 @@ p, img, div {
 	margin: auto 0;
 }
 
+.carousel {
+	display: flex;
+    width: 720px;
+    height: 240px;
+    overflow: hidden;
+}
+
 
 .review1 {
 	display: flex;

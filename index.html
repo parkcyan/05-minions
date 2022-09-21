@@ -14,16 +14,52 @@
 	<body>
 		<h1 class="d-none">Minions: The Rise of Gru</h1>
 		<script>
-			function showAfterLoad() {
-				$("#popup").css("display", "block");
-				$("body").css("overflow", "hidden");
-			}
-			$(function(){
-				$("#close").click(function(){
-					$("#popup").css("display", "none");
-				})
-			})
+		
+			window.addEventListener("DOMContentLoaded", function(){
+				
+				const popup = document.querySelector("#popup");
+				const close = document.querySelector("#close");
+				const body = document.querySelector("body");
+				//popup.style.display = "block;";
+				//body.style.overflow = "hidden";
+				close.addEventListener("click", function(){
+					popup.style.display = "none";
+				})		
+				
+				const carousel = document.querySelector(".carousel");
+				const reviews = document.querySelectorAll(".review1");
+				const aback = document.querySelector("#arrowback");
+				const afor = document.querySelector("#arrowforward");
+				const character = document.querySelector(".character");
+				
+				let x = 0;
+				
+				const reviewLeft = function() {
+					if (x == 0) x = -1440; 
+					else x += 720;
+					reviews.forEach(function(review){
+						review.style.transform = "translateX(" + x + "px)";
+						review.style.transition = "all .3s";
+					})	
+				}
+				
+				const reviewRight = function() {
+					if (x == -1440) x = 0;
+					else x -= 720;
+					reviews.forEach(function(review){
+						review.style.transform = "translateX(" + x + "px)";
+						review.style.transition = "all .3s";
+					})
+				}
+				
+				aback.addEventListener("click" , reviewLeft);
+				afor.addEventListener("click" , reviewRight);
+				reviewRightInterval = setInterval(reviewRight, 3000);
+				
+			});
+		
 		</script>
+		
 		<div id="popup" class="bg">
 			<div class="content">
 				<img src="images/social2.png" alt="social2" />
@@ -31,6 +67,7 @@
 			</div>
 			
 		</div>
+	
 		<header>
 			<div class="header-top">
 				<ul class="links">
@@ -61,6 +98,8 @@
 				</nav>
 			</div>
 			<br>
+		</header>
+		<section>
 			<!-- /.header-bottom -->
 			<div class="video-wrap">
 				<iframe class="video" width="920" height="517" src="https://www.youtube.com/embed/qoXf5Zr3BhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -73,14 +112,28 @@
 			<article class="review">
 				<p>Reviews</p>
 				<div class="review-div">
-					<img src="images/arrowback.png" alt="arrowback" />
-					<div class="review1">
-						<img src="images/review1.png" alt="" />
-						<p>미니언즈2 가족들과 함께 봤습니다. 코로나19로 그동안 영화나 애니메이션등을 집에서만 봤는데, ....... <br>
-						..... 강추합니다.
-						</p>
-					</div>	
-					<img src="images/arrowforward.png" alt="arrowforward" />
+					<img src="images/arrowback.png" alt="arrowback" id="arrowback" />
+					<div class="carousel">
+						<div class="review1">
+							<img src="images/review1.png" alt="" />
+							<p>미니언즈2 가족들과 함께 봤습니다. 코로나19로 그동안 영화나 애니메이션등을 집에서만 봤는데, ....... <br>
+							..... 강추합니다.
+							</p>
+						</div>	
+						<div class="review1">
+							<img src="images/review1.png" alt="" />
+							<p>비셔스6와 최종대결에서 미니언즈 마법 걸린것도 너무 웃기고 귀여웠고 중국 무술 배운거 각성해서 싸우기도하고 변신한 악당들 보는맛도 있었고 <br> 
+							그루도 활약하고 결말까지 볼만했습니다.
+							</p>
+						</div>	
+						<div class="review1">
+							<img src="images/review1.png" alt="" />
+							<p>전반적으로 1970년대 음악이나 배경도 괜찮았고 미니언즈도 엄청 귀엽고 웃긴 상황들도 너무 많았으며 자기들끼리 티격태격하는 재미난 장면들도 많았는데 
+							다른거보다 확실히 미니언즈 귀여움으로 50%는 그냥 먹고 들어가는 영화였습니다.
+							</p>
+						</div>	
+					</div>
+					<img src="images/arrowforward.png" alt="arrowforward" id="arrowforward"/>
 				</div>
 			</article>
 			<article class="goods">
@@ -119,7 +172,7 @@
 					</div>
 				</div>
 			</article>
-		</header>
+		</section>
 		<footer>
 			<div class="footerimg">
 				<img src="images/bottombg.png" alt="bottombg" />
